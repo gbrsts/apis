@@ -1,5 +1,3 @@
 # Api's
 
-Api's: 
-  - NodeJS - Express
-  - NodeJS - NestJS
+Api's with NodeJS using Express or NestJS.
