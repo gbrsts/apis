@@ -2,6 +2,24 @@ POST http://localhost:4002/products
 content-type: application/json
 
 {
-    "name": "keyboard",
-    "price": 999
+  "name": "",
+  "price": 1
 }
+
+###
+GET  http://localhost:4002/products
+
+###
+GET  http://localhost:4002/products/753fdef1-04bd-4fcc-afd4-66ecd85c552c
+
+###
+PUT http://localhost:4002/products/231ac3fb-f17a-4e1e-8854-7e3b2b09a817
+content-type: application/json
+
+{
+  "name": "",
+  "price": 1
+}
+
+###
+DELETE http://localhost:4002/products/231ac3fb-f17a-4e1e-8854-7e3b2b09a817
