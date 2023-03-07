@@ -1,23 +1,8 @@
-const http = require("http")
+const express = require("express")
+const app = express()
 
-http.createServer((request, response) => {
-  
-  response.writeHead(200, {"Content-Type": "application/json"})
+app.get("/home", (request, response) => {
+  response.sendFile(__dirname + "/src/pages/index.html")
+})
 
-  if (request.url === "/route-1"){
-    response.end(
-      JSON.stringify({
-        mensage: "Route-1"
-      })
-    )
-  }
-
-  if (request.url === "/route-2"){
-    response.end(
-      JSON.stringify({
-        mensage: "Route-2"
-      })
-    )
-  }
-
-}).listen(3001, () => console.log("Server on port 3001"))
+app.listen(3001, () => console.log("Server on port 3001"))
